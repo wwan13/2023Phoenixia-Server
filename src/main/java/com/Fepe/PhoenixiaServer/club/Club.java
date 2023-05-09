@@ -2,20 +2,17 @@ package com.Fepe.PhoenixiaServer.club;
 
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @Getter @Setter
 @AllArgsConstructor @NoArgsConstructor
-@EqualsAndHashCode(of = "club_id")
+@EqualsAndHashCode(of = "id")
 public class Club {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer club_id;
+    @GeneratedValue()
+    private Integer id;
     private Integer number;
     private String category;
     private String imageUrl;
